@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,55 +6,99 @@
   <meta name="description" content="Yufeng Zeng — robotics engineering, sensor fusion, control, and robot learning.">
   <title>Yufeng Zeng</title>
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon-robot.svg">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #000;
+      font-family: "Lato", Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus { color: #f09228; }
+
+    .page { max-width: 800px; margin: 0 auto; padding: 40px 16px; }
+
+    .intro { display: flex; align-items: center; gap: 5%; }
+    .intro-text { flex: 1 1 62%; }
+    .name { text-align: center; font-size: 32px; font-weight: 400; margin: 0 0 18px; }
+    .intro-text p { margin: 0 0 14px; }
+    .contact { text-align: center; margin-top: 20px; }
+    .contact a { white-space: nowrap; }
+
+    /* circular crop of assets/images/photo.jpg (946 x 1328), centred on the face */
+    .portrait {
+      flex: 0 0 33%;
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .portrait img {
+      position: absolute;
+      width: 168.9%;
+      left: -33.9%;
+      top: -107.1%;
+    }
+
+    h2 { font-size: 22px; font-weight: 400; margin: 44px 0 12px; }
+
+    .edu { margin: 0; padding: 0; list-style: none; }
+    .edu li { display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; }
+    .edu .school { font-weight: 700; }
+    .edu .degree { color: #333; }
+    .edu .years { color: #666; white-space: nowrap; }
+
+    footer { text-align: right; font-size: 12px; color: #888; margin-top: 48px; }
+    footer a { color: #888; text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .page { padding: 24px 16px; }
+      .intro { flex-direction: column-reverse; }
+      .portrait { width: 55%; flex-basis: auto; margin-bottom: 16px; }
+      .edu li { flex-direction: column; gap: 0; }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Yufeng Zeng</h1>
-      <img
-        class="portrait"
-        src="./assets/images/photo.jpg"
-        alt="Yufeng Zeng at Zhangjiajie National Forest Park"
-      >
-    </header>
-
-    <hr>
-
-    <section aria-labelledby="about-heading">
-      <h2 id="about-heading">About</h2>
-      <p>
-        I am a robotics engineering student interested in sensor fusion and estimation,
-        robotic manipulation and locomotion, and reinforcement learning.
-      </p>
+  <div class="page">
+    <section class="intro">
+      <div class="intro-text">
+        <h1 class="name">Yufeng Zeng</h1>
+        <p>
+          I am a robotics engineering student interested in sensor fusion and estimation,
+          robotic manipulation and locomotion, and reinforcement learning.
+        </p>
+        <p class="contact">
+          <a href="mailto:zyufeng@umich.edu">Email</a> &nbsp;/&nbsp;
+          <a href="./assets/documents/CV_Yufeng_Zeng.pdf" target="_blank" rel="noreferrer">CV</a> &nbsp;/&nbsp;
+          <a href="https://github.com/Yufeng1216" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+      </div>
+      <div class="portrait">
+        <img src="./assets/images/photo.jpg" alt="Yufeng Zeng at Zhangjiajie National Forest Park">
+      </div>
     </section>
 
-    <hr>
+    <h2>Education</h2>
+    <ul class="edu">
+      <li>
+        <span><span class="school">University of Michigan</span><br><span class="degree">M.S.E. Mechanical Engineering</span></span>
+        <span class="years">2026 – Present</span>
+      </li>
+      <li>
+        <span><span class="school">South China University of Technology</span><br><span class="degree">B.E. Robotics Engineering</span></span>
+        <span class="years">2022 – 2026</span>
+      </li>
+    </ul>
 
-    <section aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <dl class="education-list">
-        <div>
-          <dt>University of Michigan</dt>
-          <dd>M.S.E. Mechanical Engineering · 2026–Present</dd>
-        </div>
-        <div>
-          <dt>South China University of Technology</dt>
-          <dd>B.E. Robotics Engineering · 2022–2026</dd>
-        </div>
-      </dl>
-    </section>
-
-    <hr>
-
-    <section aria-labelledby="links-heading">
-      <h2 id="links-heading">Links</h2>
-      <ul>
-        <li><a href="./assets/documents/CV_Yufeng_Zeng.pdf" target="_blank" rel="noreferrer">Curriculum Vitae</a></li>
-        <li><a href="https://github.com/Yufeng1216" target="_blank" rel="noreferrer">GitHub</a></li>
-        <li><a href="mailto:zyufeng@umich.edu">Email</a></li>
-      </ul>
-    </section>
-  </main>
+    <footer>
+      Design from <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron's website</a>.
+    </footer>
+  </div>
 </body>
 </html>
