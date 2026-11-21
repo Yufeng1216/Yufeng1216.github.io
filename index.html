@@ -1,259 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yufeng Zeng — robotics, sensor fusion and estimation, manipulation and locomotion, reinforcement learning.">
+  <meta name="description" content="Yufeng Zeng — robotics engineering, sensor fusion, control, and robot learning.">
   <title>Yufeng Zeng</title>
   <link rel="icon" type="image/svg+xml" href="./assets/images/favicon-robot.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background: #fff;
-      color: #000;
-      font-family: "Lato", Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    a { color: #1772d0; text-decoration: none; }
-    a:hover, a:focus { color: #f09228; }
-    strong { font-weight: 700; }
-
-    .page { max-width: 800px; margin: 0 auto; padding: 24px 16px 40px; }
-
-    /* ---------- header ---------- */
-    .intro { display: flex; align-items: center; gap: 4%; padding: 2.5% 0; }
-    .intro-text { flex: 1 1 63%; }
-    .name { text-align: center; font-size: 32px; font-weight: 400; margin: 0 0 16px; }
-    .intro-text p { margin: 0 0 14px; }
-    .contact { text-align: center; margin-top: 18px; }
-    .contact a { white-space: nowrap; }
-
-    /* circular crop of assets/images/photo.jpg (946 x 1328), centred on the face */
-    .portrait {
-      flex: 0 0 33%;
-      position: relative;
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .portrait img {
-      position: absolute;
-      width: 168.9%;
-      left: -33.9%;
-      top: -107.1%;
-    }
-
-    /* ---------- sections ---------- */
-    h2 { font-size: 22px; font-weight: 400; margin: 28px 0 6px; }
-    .section-note { margin: 0 0 8px; }
-
-    .entry { display: flex; gap: 4%; padding: 16px 0; align-items: center; }
-    .entry.highlight { background: #ffffd0; }
-    .thumb {
-      flex: 0 0 25%;
-      align-self: stretch;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 6px;
-      color: #fff;
-      padding: 10px;
-      box-sizing: border-box;
-      line-height: 1.3;
-    }
-    /* To use a real figure instead of a coloured tile, replace the tile's
-       <div class="thumb ..."> with: <img class="thumb-img" src="./assets/images/xxx.jpg" alt=""> */
-    .thumb-img { flex: 0 0 25%; width: 25%; border-radius: 6px; object-fit: cover; }
-    .thumb .venue { font-size: 18px; font-weight: 700; }
-    .thumb .year { font-size: 13px; opacity: .9; }
-    .t-soft { background: linear-gradient(135deg, #1f6f8b, #3fa796); }
-    .t-audio { background: linear-gradient(135deg, #5b4b8a, #8c6bb1); }
-    .t-arm { background: linear-gradient(135deg, #b5651d, #e09f3e); }
-    .t-roll { background: linear-gradient(135deg, #2d6a4f, #74a57f); }
-    .t-cont { background: linear-gradient(135deg, #1d3557, #457b9d); }
-
-    .entry-text { flex: 1 1 71%; }
-    .papertitle { font-size: 15px; font-weight: 700; }
-    .entry-text p { margin: 6px 0 0; }
-    .meta { margin-top: 2px; }
-    .entry-text ul { margin: 6px 0 0; padding-left: 18px; }
-    .entry-text li { margin: 2px 0; }
-
-    /* compact "misc" table */
-    .misc { width: 100%; border-collapse: collapse; }
-    .misc td { vertical-align: top; padding: 8px 0; }
-    .misc td.label { width: 25%; padding-right: 4%; color: #555; }
-    .misc ul { margin: 0; padding-left: 18px; }
-    .misc li { margin: 2px 0; }
-
-    footer { text-align: right; font-size: 12px; color: #888; margin-top: 36px; }
-    footer a { color: #888; text-decoration: underline; }
-
-    @media (max-width: 600px) {
-      .intro { flex-direction: column-reverse; }
-      .portrait { width: 55%; flex-basis: auto; margin-bottom: 12px; }
-      .entry { flex-direction: column; align-items: stretch; }
-      .thumb, .thumb-img { width: 100%; min-height: 70px; margin-bottom: 8px; }
-      .misc td.label { width: 30%; }
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <div class="page">
+  <main>
+    <header>
+      <h1>Yufeng Zeng</h1>
+      <img
+        class="portrait"
+        src="./assets/images/photo.jpg"
+        alt="Yufeng Zeng at Zhangjiajie National Forest Park"
+      >
+    </header>
 
-    <!-- ================= Intro ================= -->
-    <section class="intro">
-      <div class="intro-text">
-        <h1 class="name">Yufeng Zeng</h1>
-        <p>
-          I am an M.S.E. student in Mechanical Engineering at the
-          <a href="https://umich.edu/">University of Michigan</a>.
-          I received my B.E. in Robotics Engineering from
-          <a href="https://www.scut.edu.cn/en/">South China University of Technology</a> (2022–2026),
-          where I worked with
-          <a href="https://scholar.google.com/citations?user=fW_m0UYAAAAJ&amp;hl=en">Prof. Yunquan Li</a>
-          on soft continuum robots.
-        </p>
-        <p>
-          My interests are sensor fusion &amp; estimation, robotic manipulation and locomotion,
-          and reinforcement learning.
-        </p>
-        <p class="contact">
-          <a href="mailto:zyufeng@umich.edu">Email</a> &nbsp;/&nbsp;
-          <a href="./assets/documents/CV_Yufeng_Zeng.pdf" target="_blank" rel="noreferrer">CV</a> &nbsp;/&nbsp;
-          <a href="https://github.com/Yufeng1216" target="_blank" rel="noreferrer">GitHub</a>
-        </p>
-      </div>
-      <div class="portrait">
-        <img src="./assets/images/photo.jpg" alt="Yufeng Zeng at Zhangjiajie National Forest Park">
-      </div>
+    <hr>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <p>
+        I am a robotics engineering student interested in sensor fusion and estimation,
+        robotic manipulation and locomotion, and reinforcement learning.
+      </p>
     </section>
 
-    <!-- ================= Publications ================= -->
-    <h2>Publications</h2>
-    <p class="section-note">* denotes equal contribution.</p>
+    <hr>
 
-    <div class="entry">
-      <div class="thumb t-soft"><span class="venue">Biomimetics</span><span class="year">2025</span></div>
-      <div class="entry-text">
-        <a href="https://doi.org/10.3390/biomimetics10100643" class="papertitle">
-          Multi-Segment Extendable Soft Manipulator Driven by a Pneumatic–Tendon Coupling Mechanism
-        </a>
-        <div class="meta">Hongxi Yang*, <strong>Yufeng Zeng*</strong>, et al.</div>
-        <div class="meta"><em>Biomimetics</em>, 2025</div>
-        <div class="meta"><a href="https://doi.org/10.3390/biomimetics10100643">paper</a></div>
-      </div>
-    </div>
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <dl class="education-list">
+        <div>
+          <dt>University of Michigan</dt>
+          <dd>M.S.E. Mechanical Engineering · 2026–Present</dd>
+        </div>
+        <div>
+          <dt>South China University of Technology</dt>
+          <dd>B.E. Robotics Engineering · 2022–2026</dd>
+        </div>
+      </dl>
+    </section>
 
-    <div class="entry">
-      <div class="thumb t-audio"><span class="venue">EIECS</span><span class="year">2025</span></div>
-      <div class="entry-text">
-        <a href="https://ieeexplore.ieee.org/document/11283227" class="papertitle">
-          Research on the Principle, Application and Optimization of Spectral Subtraction Audio Noise Reduction Technology
-        </a>
-        <div class="meta">Zhicheng Ling*, <strong>Yufeng Zeng*</strong>, Pinrui He</div>
-        <div class="meta"><em>EIECS</em>, Changchun, China, 2025</div>
-        <div class="meta"><a href="https://ieeexplore.ieee.org/document/11283227">IEEE Xplore</a></div>
-      </div>
-    </div>
+    <hr>
 
-    <!-- ================= Projects ================= -->
-    <h2>Research &amp; Projects</h2>
-
-    <div class="entry">
-      <div class="thumb t-arm"><span class="venue">SO-ARM101</span><span class="year">2026</span></div>
-      <div class="entry-text">
-        <span class="papertitle">Assembly and Calibration of SO-ARM101 Robotic Arm</span>
-        <div class="meta"><em>Personal project</em> · May 2026 – Jun. 2026</div>
-        <ul>
-          <li>Assembled the SO-ARM101 dual-arm robotic system and set up the LeRobot development environment (Conda, PyTorch).</li>
-          <li>Completed mechanical assembly and servo zero-position calibration with <code>lerobot-calibrate</code>.</li>
-          <li>Ran basic teleoperation tests and validated the data-recording pipeline for imitation learning.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="thumb t-roll"><span class="venue">Rolling Robot</span><span class="year">2026</span></div>
-      <div class="entry-text">
-        <span class="papertitle">Omnidirectional Untethered Rolling Robot</span>
-        <div class="meta"><em>Undergraduate capstone project</em>, SCUT · Advisor:
-          <a href="https://scholar.google.com/citations?user=fW_m0UYAAAAJ&amp;hl=en">Prof. Yunquan Li</a> · Jan. 2026 – Jun. 2026</div>
-        <ul>
-          <li>Designed a fully untethered omnidirectional rolling robot with 12 pneumatic–tendon soft legs.</li>
-          <li>Built an STM32/FreeRTOS controller for pressure PID, servo gait, IMU estimation, and wireless links.</li>
-          <li>Achieved 0.267 m/s and a 1 kg payload while cutting tendon tension ~34% and nearly tripling extension force.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="thumb t-cont"><span class="venue">Continuum Robots</span><span class="year">2024–2025</span></div>
-      <div class="entry-text">
-        <span class="papertitle">Precise End-Effector Control of Continuum Soft Robots</span>
-        <div class="meta"><em>Research assistant</em>, SCUT · Advisor:
-          <a href="https://scholar.google.com/citations?user=fW_m0UYAAAAJ&amp;hl=en">Prof. Yunquan Li</a>
-          (NSFC-funded project No. 52405019) · Feb. 2024 – Apr. 2025</div>
-        <ul>
-          <li>Investigated methods to improve end-effector accuracy for continuum soft robots with hybrid tendon–pneumatic actuation.</li>
-          <li>Built kinematic models coupled with residual neural networks for real-time position control.</li>
-          <li>Implemented PID pneumatic control and ROS-based modules for the control stack; evaluated multiple continuum-robot modeling techniques.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ================= Misc ================= -->
-    <h2>Miscellanea</h2>
-    <table class="misc">
-      <tr>
-        <td class="label">Education</td>
-        <td>
-          <ul>
-            <li><strong>University of Michigan</strong>, M.S.E. in Mechanical Engineering · 2026 – present</li>
-            <li><strong>South China University of Technology</strong>, B.E. in Robotics Engineering · 2022 – 2026 · GPA 3.75/4.0</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Competitions</td>
-        <td>
-          <ul>
-            <li>19th "Challenge Cup" National College Students' Extracurricular Academic Science and Technology Works Competition — National Third Prize (Nov. 2024): a continuum soft robot for navigating unstructured pipeline environments.</li>
-            <li>ROBOCON 2023: Angkor Wat — National Third Prize (Jul. 2023): mechanical structure assembly and 3D modeling in SolidWorks.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Honors</td>
-        <td>
-          <ul>
-            <li>Sino-Fountain Sci-Tech Competition Scholarship (2025)</li>
-            <li>Excellence Group Foundation Scholarship (2024); Gourmet Noodle House Innovation Scholarship (2024); Third-Class Scholarship (2024)</li>
-            <li>Outstanding Volunteer (2023)</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Skills</td>
-        <td>
-          <ul>
-            <li>Python, C++, MATLAB, ROS2, PyTorch, MuJoCo · STM32, RTOS, Arduino, Raspberry Pi ·
-              PID, LQR, MPC, Kalman filtering · SolidWorks, CAD, 3D printing</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-
-    <footer>
-      Design and source code from <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron's website</a>.
-    </footer>
-  </div>
+    <section aria-labelledby="links-heading">
+      <h2 id="links-heading">Links</h2>
+      <ul>
+        <li><a href="./assets/documents/CV_Yufeng_Zeng.pdf" target="_blank" rel="noreferrer">Curriculum Vitae</a></li>
+        <li><a href="https://github.com/Yufeng1216" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="mailto:zyufeng@umich.edu">Email</a></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
