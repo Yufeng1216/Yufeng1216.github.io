@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yufeng Zeng — robotics engineering, sensor fusion, control, and robot learning.">
   <title>Yufeng Zeng</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon-robot.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -30,20 +29,12 @@
     .contact { text-align: center; margin-top: 20px; }
     .contact a { white-space: nowrap; }
 
-    /* circular crop of assets/images/photo.jpg (946 x 1328), centred on the face */
     .portrait {
       flex: 0 0 33%;
-      position: relative;
       aspect-ratio: 1 / 1;
-      border-radius: 50%;
       overflow: hidden;
     }
-    .portrait img {
-      position: absolute;
-      width: 168.9%;
-      left: -33.9%;
-      top: -107.1%;
-    }
+    .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
     h2 { font-size: 22px; font-weight: 400; margin: 44px 0 12px; }
 
@@ -80,7 +71,7 @@
         </p>
       </div>
       <div class="portrait">
-        <img src="./assets/images/photo.jpg" alt="Yufeng Zeng at Zhangjiajie National Forest Park">
+        <img src="./assets/images/headshot.jpg" alt="Yufeng Zeng">
       </div>
     </section>
 
