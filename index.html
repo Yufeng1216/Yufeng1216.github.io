@@ -52,16 +52,17 @@
       position: fixed;
       left: 16px;
       bottom: 16px;
-      width: 96px;
+      width: 152px;
       height: auto;
       transform: scaleX(-1);
+      filter: brightness(1.02);
       mix-blend-mode: multiply;
       pointer-events: none;
     }
 
-    @media (max-width: 1060px) {
+    @media (max-width: 1160px) {
       footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
-      .typing-snoopy { position: static; width: 72px; }
+      .typing-snoopy { position: static; width: 104px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -123,8 +124,8 @@
     </ul>
 
     <footer>
-      <!-- Animation source: https://makeemoji.com/emoji-makers/snoopy-typing -->
-      <img class="typing-snoopy" src="./assets/images/snoopy-typing.gif" width="120" height="120" alt="">
+      <!-- Animation source: https://tenor.com/view/snoopy-typing-thinking-gif-11557857 -->
+      <img class="typing-snoopy" src="./assets/images/snoopy-typing.gif?v=26145e80c653" width="368" height="362" alt="">
       <span>Design from <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron's website</a>.</span>
     </footer>
   </div>
